@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ScrollBanner">
+        <attr name="orientation">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="0" />
+        </attr>
+    </declare-styleable>
+</resources>
