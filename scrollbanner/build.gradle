@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
-
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'scroll-banner'
 
-    publishedGroupId = 'com.lizhaoxuan.ScrollBanner'
-    libraryName = 'ScrollBanner'
-    artifact = 'library'
+    publishedGroupId = 'com.zhaoxuan.scrollbanner'
+    libraryName = 'scroll-banner'
+    artifact = 'scrollbanner'
 
     libraryDescription = '一个用法和ListView一模一样，可以自动滚动的banner on Android'
 
@@ -25,8 +24,8 @@ ext {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         minSdkVersion 17
@@ -44,8 +43,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
