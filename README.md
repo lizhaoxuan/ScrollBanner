@@ -1,9 +1,7 @@
 # ScrollBanner
 一个用法类似ListView 且性能高于ViewPager的滚动banner
 
-=============
-
-##前言
+## 前言
 
 项目的来源初衷是在公司的项目中接到一个实际需求，需要一个在顶部上下滚动的Banner。Banner,就算通常APP里轮播的广告。
 
@@ -12,7 +10,7 @@
 OK，看到这个东西第一时间想到的实现方案就是ViewPager，很简单的嘛。虽然是要上下滚动，和ViewPager的功能不太相同，但垂直的ViewPager应该有的吧？搜一下~我的天，重写ViewPager，还那么一大堆代码……，自己想办法吧！（有兴趣的可以搜一下，垂直滚动的ViewPager）
 
 
-##优势
+## 优势
 
 先讲一下ScrollBanner的优势在哪里，总要先忽悠住你用的嘛。
 
@@ -22,7 +20,7 @@ OK，看到这个东西第一时间想到的实现方案就是ViewPager，很简
 
 
 
-####性能高于ViewPager
+#### 性能高于ViewPager
 
 ViewPager的性能瓶颈在于，为了更通用，每一个界面都是新创建的，10个不同的界面可能就有10个View的存在，当然可以通过配置，使得ViewPager同一时间只存在3个View。但3个似乎也有点多（因为同一时间最多只有两个View同时显示），而View得创建于销毁也是有开销的。
 
@@ -34,7 +32,7 @@ ViewPager的性能瓶颈在于，为了更通用，每一个界面都是新创�
 
 **ScrollBanner的自动滚动策略利用了Handler的消息延迟发送** 弃用了传统的线程控制，Handler的好处是不存在线程的创建开销。但因Message的收发完全解耦，控制存在隐患，不过以解决（卖个关子，详情看代码哦~）
 
-####类似ListView的用法
+#### 类似ListView的用法
 
 其实就我本人来说，对使用开源控件的热度并不大。其中一个原因就是，**学习使用成本！**
 
@@ -101,12 +99,8 @@ View初始化：
 Adapter的实现完全类似ListView的Adapter，只是添加了一些额外方法，[详情看代码哦](https://github.com/lizhaoxuan/ScrollBanner/blob/master/app/src/main/java/com/zhaoxuan/demo/BannerAdapter.java)~
 
 
-###怎么样，用法真的和ListView极其类似吧，是不是毫无陌生感？
+### 怎么样，用法真的和ListView极其类似吧，是不是毫无陌生感？
 
-##引用
-
-
-*因为上传至jCenter总是异常失败，所以暂时无法直接引用*
 
 
 
